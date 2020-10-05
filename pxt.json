@@ -1,7 +1,7 @@
 {
-    "name": "GitHub test",
+    "name": "sound effects",
     "version": "0.0.1",
-    "description": "",
+    "description": "Extension to use music.playInstructions",
     "dependencies": {
         "device": "*"
     },
