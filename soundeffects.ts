@@ -25,7 +25,7 @@ enum WaveType {
     //% block="cycle 32"
     Cycle32 = 17,
     //% block="cycle 64"
-    Cycle64 = 64,
+    Cycle64 = 18,
     //% block="noise"
     Noise = 4,
 }
