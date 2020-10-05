@@ -105,7 +105,7 @@ class SoundBuffer {
 /**
  * Provides access to sound effects.
  */
-//% color=#dd3dc1 icon="\uf0a1" advanced=true block="Sound Effects"
+//% color=#dd3dc1 icon="\uf0a1" advanced=false block="Sound Effects"
 namespace soundEffects {
     /**
      * Creates a sound effect.
