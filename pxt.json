@@ -9,7 +9,9 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "soundeffects.ts"
+        "soundeffects.ts",
+        "tilemap.g.jres",
+        "tilemap.g.ts"
     ],
     "testFiles": [
         "test.ts"
