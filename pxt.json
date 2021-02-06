@@ -1,6 +1,6 @@
 {
     "name": "sound effects",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "Extension to use music.playInstructions",
     "dependencies": {
         "device": "*"
