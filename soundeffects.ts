@@ -34,6 +34,7 @@ const enum WaveType {
 //% blockNamespace=soundEffects
 class SoundBuffer {
     _buf: Buffer;
+    _looping: boolean;
 
     /**
      * Plays a sound effect, not waiting for it to finish.
@@ -52,6 +53,37 @@ class SoundBuffer {
     playUntilDone() {
         music.playInstructions(0, this._buf);
         pause(this.duration)
+    }
+
+    /**
+     * Plays a sound effect continuously.
+     */
+    //% blockId="loop_method" block="play %soundeffect until stopped"
+    //% weight=10
+    loop() {
+        if (this._looping) return
+        this._looping = true
+        control.runInParallel(() => {
+            let pos = control.millis()
+            while (this._looping) {
+                let now = control.millis()
+                let waitMillis = pos - now
+                //console.logValue("duration", this.duration)
+                //console.logValue("waitMillis", waitMillis)
+                pos += this.duration
+                music.playInstructions(waitMillis - 1, this._buf)
+                pause(Math.max(waitMillis - 50, 1))
+            }
+        })
+    }
+
+    /**
+     * Stops a looping sound effect.
+     */
+    //% blockId="stop_method" block="stop %soundeffect"
+    //% weight=9
+    stop() {
+        this._looping = false
     }
 
     constructor(wave: number, duration: number, f0: number, f1: number, v0: number, v1: number) {
