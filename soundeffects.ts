@@ -1,7 +1,3 @@
-namespace music {
-    //% shim=music::queuePlayInstructions
-    export function playInstructions(timeDelta: number, buf: Buffer) { }
-}
 const enum WaveType {
     //% block="triangle"
     Triangle = 1,
